@@ -2,14 +2,36 @@
 const btnCriar = document.getElementById("btn-criar");
 const inputTamanho = document.querySelector(".input-tamanho");
 const caixaPai = document.querySelector(".caixa-pai");
-let posicaoInicio = 1; // Variável para rastrear o início da lista
-let posicaoMeio = 0; // Variável para rastrear o meio da lista
-var proximoItemRemover = 1; // Índice do próximo item a ser removido
+const caixaSaida = document.querySelector(".caixa-saida");
+
+// Variáveis para rastrear a posição da lista
+let posicaoInicio = 1;
+let posicaoMeio = 0;
+let posicaoFim;
+
+// Array para armazenar as mensagens de erro
+let mensagensErro = [];
+
+// Função para redefinir as posições iniciais
+function redefinirPosicoes() {
+  posicaoInicio = 1;
+  posicaoMeio = 0;
+  posicaoFim = 0;
+}
 
 // Função para criar a lista
 function criarLista() {
   // Obter o valor do tamanho inserido
   const tamanho = parseInt(inputTamanho.value);
+
+  // Validar o tamanho da lista
+  if (tamanho < 3 || tamanho > 10) {
+    mensagensErro.push("Erro: Tamanho inválido para lista");
+    exibirMensagensErro();
+    return;
+  }
+
+  redefinirPosicoes();
 
   // Criar a lista
   const lista = document.createElement("ul");
@@ -27,6 +49,9 @@ function criarLista() {
   // Calcular a posição do meio da lista
   posicaoMeio = Math.ceil(tamanho / 2);
 
+  // Atualizar a posição do fim da lista
+  posicaoFim = tamanho + posicaoInicio - 1;
+
   // Adicionar itens à lista
   for (let i = 0; i < tamanho; i++) {
     const novoItem = document.createElement("li");
@@ -36,9 +61,6 @@ function criarLista() {
 
   // Adicionar a lista à caixa pai
   caixaPai.appendChild(lista);
-
-  // Mostrar o botão "Apagar"
-  botaoApagar.classList.remove("hidden");
 }
 
 // Adicionar evento de clique ao botão "Criar"
@@ -126,34 +148,26 @@ document.querySelector(".botao-fim").addEventListener("click", function () {
   inputValor.value = "";
 });
 
-// Selecionar o botão "Apagar"
-const botaoApagar = document.querySelector(".botao-apagar");
-
-// Adicionar evento de clique ao botão "Apagar"
-botaoApagar.addEventListener("click", apagarItem);
-
-// Função para apagar o próximo item preenchido da lista
-function apagarItem() {
-  // Verificar se há uma lista criada
-  const lista = document.querySelector(".caixa-pai ul");
-  if (!lista) {
-    return;
-  }
-
-  // Obter todos os itens da lista
-  const itens = lista.getElementsByTagName("li");
-
-  // Verificar se há itens suficientes para remover
-  if (itens.length >= proximoItemRemover) {
-    // Verificar se o item atual está preenchido
-    if (itens[proximoItemRemover - 1].textContent.trim() !== "") {
-      // Apagar o texto que está na frente do número
-      const texto = itens[proximoItemRemover - 1].textContent;
-      const numero = texto.substring(0, texto.indexOf("-") + 1);
-      itens[proximoItemRemover - 1].textContent = numero;
-    }
-
-    // Atualizar a posição do próximo item a ser removido
-    proximoItemRemover++;
-  }
+// Exibir mensagens de erro na caixa de saída
+function exibirMensagensErro() {
+  var caixaSaida = document.getElementById("caixaSaida");
+  caixaSaida.textContent = "";
+  mensagensErro.forEach((mensagem) => {
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = mensagem;
+    caixaSaida.appendChild(paragrafo);
+  });
 }
+
+// Limpar mensagens de erro
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtém uma referência ao botão "Limpar"
+  var botaoLimpar = document.querySelector(".botao-limpar");
+
+  // Adiciona um ouvinte de evento para o botão "Limpar"
+  botaoLimpar.addEventListener("click", function () {
+    var caixaSaida = document.getElementById("caixaSaida");
+    caixaSaida.innerHTML = ""; // Limpa o conteúdo da caixa de saída
+    mensagensErro = []; // Limpa o array de mensagens de erro
+  });
+});
