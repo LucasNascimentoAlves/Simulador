@@ -1,0 +1,128 @@
+.caixa-tamanho {
+  background-color: #f2f2f2;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.input-tamanho {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botao-criar {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-criar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.caixa-pai {
+  margin-top: 10px;
+}
+
+.caixa-valor {
+  background-color: #f2f2f2;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.conteudo-valor {
+  display: inline-flex;
+  align-items: center;
+}
+
+.botao-inicio {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-meio {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-fim {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-apagar {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-inicio:hover,
+.botao-meio:hover,
+.botao-fim:hover,
+.botao-apagar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.input-valor {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botao-desenfileirar {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-desenfileirar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.inicio,
+.fim {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.caixa-saida {
+  height: 10em;
+  width: 60%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: scroll;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.botao-limpar {
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-limpar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
