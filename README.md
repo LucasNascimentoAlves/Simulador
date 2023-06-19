@@ -53,3 +53,26 @@ Este projeto implementa uma lista usando JavaScript e HTML. A lista é represent
 2.2 Insira um valor na caixa de entrada "Valor" e clique no botão "Fim" para atualizar o elemento da lista na posição de fim.
 3. A lista atualizada será exibida na tela.
 4. Mensagens de erro serão exibidas na caixa de saída se ocorrerem condições específicas, como tamanho inválido da lista.
+
+
+# 4. Árvore
+
+Este projeto implementa uma lista usando JavaScript e HTML. A lista é representada visualmente por meio de uma sequência de números exibidos na tela. O projeto permite atualizar os elementos da lista nas posições de início, meio e fim.
+
+## Funcionalidades
+
+- Adicionar um valor à árvore binária
+- Pesquisar um valor na árvore binária
+- Visualizar a árvore binária em forma de gráfico
+
+
+## Requisitos
+
+- Navegador da web moderno com suporte a HTML5 e JavaScript.
+
+
+## Uso
+
+1. Digite um valor numérico no campo de entrada e clique no botão "Adicionar" para adicionar o valor à árvore binária.
+2. Para pesquisar um valor específico na árvore binária, digite o valor no campo de entrada e clique no botão "Buscar". Uma mensagem será exibida informando se o valor foi encontrado ou não na árvore.
+3. Para limpar a árvore binária, clique no botão "Limpar". Isso removerá todos os valores da árvore e reiniciará o gráfico.
