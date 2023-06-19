@@ -27,7 +27,7 @@ Este projeto implementa uma fila circular usando JavaScript e HTML. A fila é re
 7. Os números deletados são impressos na caixa de saída.
 
 
-# 3. Lista
+# 2. Lista
 
 Este projeto implementa uma lista usando JavaScript e HTML. A lista é representada visualmente por meio de uma sequência de números exibidos na tela. O projeto permite atualizar os elementos da lista nas posições de início, meio e fim.
 
@@ -55,9 +55,9 @@ Este projeto implementa uma lista usando JavaScript e HTML. A lista é represent
 4. Mensagens de erro serão exibidas na caixa de saída se ocorrerem condições específicas, como tamanho inválido da lista.
 
 
-# 4. Árvore
+# 3. Árvore
 
-Este projeto implementa uma lista usando JavaScript e HTML. A lista é representada visualmente por meio de uma sequência de números exibidos na tela. O projeto permite atualizar os elementos da lista nas posições de início, meio e fim.
+Este projeto implementa uma Árvore Binária em JavaScript. Ele permite que você adicione valores à árvore, pesquise por um valor específico e visualize a árvore binária em forma de gráfico.
 
 ## Funcionalidades
 
