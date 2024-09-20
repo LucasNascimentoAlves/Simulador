@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador: Lista</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+</head>
+<header>
+    <h1>Simulador: Lista</h1>
+</header>
+
+<body>
+    <div class="caixa-tamanho">
+        Tamanho:
+        <input type="number" class="input-tamanho">
+        <button class="botao-criar" id="btn-criar">Criar</button>
+    </div>
+
+    <div class="caixa-pai">
+        <div class="caixa-valor">
+            Valor:
+            <div class="conteudo-valor">
+                <input type="text" class="input-valor">
+                <button class="botao-inicio">Início</button>
+                <button class="botao-meio">Meio</button>
+                <button class="botao-fim">Fim</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="lista-container">
+        <!-- Itens da lista serão adicionados aqui -->
+      </div>
+      
+
+    <script src="script/script.js"></script>
+</body>
+<footer>
+    <h1>Saída</h1>
+    <div class="caixa-saida" id="caixaSaida">
+    </div>
+    <button class="botao-limpar">Limpar</button>
+</footer>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+  <title>Simulador: Pilha</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<header>
+ <h1>Simulador: Estrutura Pilha (LIFO)</h1>
+</header>
+<body>
+  <div class="caixa-tamanho">
+    Tamanho:
+    <input type="number" class="input-tamanho">
+    <button class="botao-criar" onclick="criarPilha()">Criar</button>
+  </div>
+  
+  <div class="caixa-pai">
+    <div class="caixa-valor">
+      Valor:
+      <div class="conteudo-valor">
+        <input type="number" class="input-valor" id="input-valor" disabled>
+        <button class="botao-empilhar" onclick="empilhar()">Empilhar</button>
+        <button class="botao-empilhar-aleatorio" onclick="empilharAleatorio()">Empilhar Aleatório</button>
+      </div>
+    </div>
+  </div>
+  
+  <button class="botao-desempilhar" onclick="desempilhar()">Desempilhar</button>
+  <button class="botao-mais" onclick="realizarOperacao('+')">+</button>
+  <button class="botao-menos" onclick="realizarOperacao('-')">-</button>
+  <button class="botao-multiplicar" onclick="realizarOperacao('*')">*</button>
+  <button class="botao-dividir" onclick="realizarOperacao('/')">/</button>
+  <button class="botao-incrementar" onclick="realizarOperacao('INC')">INC</button>
+  <button class="botao-decrementar" onclick="realizarOperacao('DEC')">DEC</button>
+</body>
+<footer>
+<h1>Saída</h1>
+<div class="caixa-saida">
+      <!-- Números do FIFO serão exibidos aqui -->
+    </div>
+    <button class="botao-limpar" onclick="limpar()">Limpar</button>
+</footer>
+</html>
+
+<script>
+  var pilha = []; // Declaração da pilha
+  var tamanhoPilha = 0; // Tamanho máximo da pilha
+
+  function criarPilha() {
+    tamanhoPilha = parseInt(document.querySelector('.input-tamanho').value);
+    pilha = [];
+    document.getElementById('input-valor').removeAttribute('disabled');
+    document.getElementById('input-valor').value = "";
+    atualizarSaída();
+  }
+
+  function empilhar() {
+    var valor = parseInt(document.querySelector('.input-valor').value);
+    if (!isNaN(valor) && pilha.length < tamanhoPilha) {
+      pilha.push(valor);
+      atualizarSaída();
+    }
+  }
+
+  function empilharAleatorio() {
+    var valorAleatorio = Math.floor(Math.random() * 100);
+    if (pilha.length < tamanhoPilha) {
+      pilha.push(valorAleatorio);
+      atualizarSaída();
+    }
+  }
+
+  function desempilhar() {
+    pilha.pop();
+    atualizarSaída();
+  }
+
+  function realizarOperacao(operador) {
+    var valor1 = pilha.pop();
+    var valor2 = pilha.pop();
+    var resultado;
+
+    if (!isNaN(valor1) && !isNaN(valor2)) {
+      switch (operador) {
+        case '+':
+          resultado = valor2 + valor1;
+          break;
+        case '-':
+          resultado = valor2 - valor1;
+          break;
+        case '*':
+          resultado = valor2 * valor1;
+          break;
+        case '/':
+          resultado = valor2 / valor1;
+          break;
+        case 'INC':
+          resultado = valor1 + 1;
+          break;
+        case 'DEC':
+          resultado = valor1 - 1;
+          break;
+      }
+
+      pilha.push(resultado);
+      atualizarSaída();
+    }
+  }
+
+  function atualizarSaída() {
+    var caixaSaida = document.querySelector('.caixa-saida');
+    caixaSaida.innerHTML = pilha.filter(function(valor) {
+      return !isNaN(valor);
+    }).join(' ');
+  }
+
+  function limpar() {
+    pilha = [];
+    atualizarSaída();
+  }
+</script>

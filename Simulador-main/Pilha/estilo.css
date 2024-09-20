@@ -1,0 +1,184 @@
+.caixa-tamanho {
+  background-color: #f2f2f2;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.input-tamanho {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botao-criar {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-criar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.caixa-pai {
+  margin-top: 10px;
+}
+
+.caixa-valor {
+  background-color: #f2f2f2;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.conteudo-valor {
+  display: inline-flex;
+  align-items: center;
+}
+
+.botao-empilhar {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-empilhar-aleatorio {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-empilhar:hover,
+.botao-empilhar-aleatorio:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.input-valor {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botao-desempilhar {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-desempilhar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-mais {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.botao-mais:hover {
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-menos {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.botao-menos:hover {
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-multiplicar {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.botao-multiplicar:hover {
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-dividir {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.botao-dividir:hover {
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-incrementar {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.botao-incrementar:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-decrementar {
+  margin-top: 30px;
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.botao-decrementar:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.caixa-saida {
+  height: 10em;
+  width: 60%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow:scroll;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.botao-limpar {
+  padding: 5px 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.botao-limpar:hover {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
